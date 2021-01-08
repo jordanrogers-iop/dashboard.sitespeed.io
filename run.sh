@@ -12,7 +12,7 @@ EMULATED_MOBILE_BROWSERS=(chrome)
 
 # We loop through the desktop directory
 
-for file in tests/desktop/*.{txt} ; do
+for file in tests/desktop/*.{txt,js} ; do
     for browser in "${DESKTOP_BROWSERS[@]}" ; do
         echo "My name is docker"
         FILENAME=$(basename -- "$file")
