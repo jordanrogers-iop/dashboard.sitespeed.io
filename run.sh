@@ -16,7 +16,7 @@ for file in tests/desktop/*.{txt} ; do
     for browser in "${DESKTOP_BROWSERS[@]}" ; do
         echo "My name is docker"
         FILENAME=$(basename -- "$file")
-        echo "the file name is $FILENAME"
+        echo "the file name is $file"
         FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}"
         CONFIG_FILE="config/$FILENAME_WITHOUT_EXTENSION.json"
         [[ -f "$CONFIG_FILE" ]] && echo "Using config file $CONFIG_FILE" || echo "Missing config file $CONFIG_FILE"
